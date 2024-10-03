@@ -1,0 +1,5 @@
+.btn-success:hover {
+  background-color: #ffffff;
+  color: #198754;
+  transition-duration: 0.4s;
+}

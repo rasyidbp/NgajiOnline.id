@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login SignUp | NgajiOnline.id</title>
+    <link rel="stylesheet" href="signInStyles.css" />
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist\css\bootstrap.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary fixed-top"
+      aria-label="Thirteenth navbar example"
+    >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarsExample11"
+          aria-controls="navbarsExample11"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+          <a
+            class="navbar-brand col-lg-3 me-0 text-success fw-semibold"
+            href="index.html"
+            >NgajiOnline.id</a
+          >
+          <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+            <li class="nav-item">
+              <a
+                class="nav-link text-success fw-semibold active link-underline-opacity-75-hover"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+          </ul>
+          <div class="d-lg-flex col-lg-3 justify-content-lg-end"></div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <input type="checkbox" id="flip" />
+      <div class="cover">
+        <div class="front">
+          <img src="img\logIn.jpg" alt="" />
+          <!-- <div class="text">
+            <span class="text-1">Every new friend is a <br> new adventure</span>
+            <span class="text-2">Let's get connected</span>
+          </div> -->
+        </div>
+        <div class="back">
+          <img class="backImg" src="img\SignUp.jpg" alt="" />
+          <!-- <div class="text">
+            <span class="text-1">Complete miles of journey <br> with one step</span>
+            <span class="text-2">Let's get started</span>
+          </div> -->
+        </div>
+      </div>
+      <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+            <form action="#">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input type="text" placeholder="Enter your email" required />
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input
+                    type="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                </div>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Remember Me?
+                </label>
+                <div class="text"><a href="#">Forgot password?</a></div>
+                <div class="button input-box">
+                  <input type="submit" value="Submit" />
+                </div>
+                <div class="text sign-up-text">
+                  Don't have an account? <label for="flip">Sign up now</label>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="signup-form">
+            <div class="title">Signup</div>
+            <form action="#">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-user"></i>
+                  <input type="text" placeholder="Enter your name" required />
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input type="text" placeholder="Enter your email" required />
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input
+                    type="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                </div>
+                <div class="button input-box">
+                  <input type="submit" value="Submit" />
+                </div>
+                <div class="text sign-up-text">
+                  Already have an account? <label for="flip">Login now</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="bootstrap-5.3.3-dist\js\bootstrap.bundle.js"></script>
+  </body>
+</html>
