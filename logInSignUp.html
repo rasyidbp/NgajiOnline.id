@@ -3,47 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <title>Login SignUp | NgajiOnline.id</title>
-    <link rel="stylesheet" href="signInStyles.css" />
+    <link rel="stylesheet" href="css/Login_signup.css" />
     <link rel="stylesheet" href="bootstrap-5.3.3-dist\css\bootstrap.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-lg bg-body-tertiary fixed-top"
-      aria-label="Thirteenth navbar example"
-    >
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarsExample11"
-          aria-controls="navbarsExample11"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
-          <a
-            class="navbar-brand col-lg-3 me-0 text-success fw-semibold"
-            href="index.html"
-            >NgajiOnline.id</a
+    <header>
+      <!-- Bootstrap Navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-          <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-            <li class="nav-item">
-              <a
-                class="nav-link text-success fw-semibold active link-underline-opacity-75-hover"
-                aria-current="page"
-                href="index.html"
-                >Home</a
-              >
-            </li>
-          </ul>
-          <div class="d-lg-flex col-lg-3 justify-content-lg-end"></div>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-lg-flex" id="navbarNav">
+            <a class="navbar-brand col-lg-3 me-0 text-success fw-semibold" href="index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+                <path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+              </svg>
+              NgajiOnline.id
+            </a>
+            <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+              <li class="nav-item">
+                <a class="nav-link text-success fw-semibold" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-success fw-semibold" href="contact.html">Kontak</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-success fw-semibold" href="about.html">Tentang Kami</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-success fw-semibold active" href="faq.html">FAQ</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
+
+
+    
     <div class="container">
       <input type="checkbox" id="flip" />
       <div class="cover">
@@ -89,7 +96,8 @@
                 <label class="form-check-label" for="flexCheckDefault">
                   Remember Me?
                 </label>
-                <div class="text"><a href="#">Forgot password?</a></div>
+                
+                <!-- <div class="text"><a href="#">Forgot password?</a></div> -->
                 <div class="button input-box">
                   <input type="submit" value="Submit" />
                 </div>
@@ -134,4 +142,5 @@
     </div>
     <script src="bootstrap-5.3.3-dist\js\bootstrap.bundle.js"></script>
   </body>
+    <script src="js/login.js"></script>
 </html>
