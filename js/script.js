@@ -1,25 +1,30 @@
+$(document).ready(function() {
+    // Animasi fade-in untuk elemen dengan kelas 'fade-in-element'
+    $('.fade-in-element').hide().fadeIn(1000);
 
-        // Simple form submission handling
-        document.getElementById('signup-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            var email = this.querySelector('input[type="email"]').value;
-            alert('Thank you for signing up with email: ' + email + '. We\'ll be in touch soon!');
-            this.reset();
-        });
-
-        // Smooth scrolling for navigation links
-        var links = document.querySelectorAll('a[href^="#"]');
-        for (var i = 0; i < links.length; i++) {
-            links[i].addEventListener('click', function(e) {
-                e.preventDefault();
-                var target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    var targetTop = target.getBoundingClientRect().top + window.pageYOffset;
-                    window.scrollTo({
-                        top: targetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+    // Efek hover pada tombol
+    $('.btn').hover(
+        function() {
+            $(this).addClass('shadow-lg'); // Menambahkan efek bayangan saat hover
+        },
+        function() {
+            $(this).removeClass('shadow-lg'); // Menghapus efek bayangan saat mouse keluar
         }
-    
+    );
+
+    // Validasi form pendaftaran
+    $('#signup-form').on('submit', function(event) {
+        event.preventDefault(); // Mencegah pengiriman form secara default
+        const email = $(this).find('input[type="email"]').val();
+
+        // Cek apakah email valid
+        if (validateEmail(email)) {
+            alert('Terima kasih telah mendaftar!'); // Tampilkan pesan sukses
+            $(this).trigger('reset'); // Reset form setelah pendaftaran
+        } else {
+            alert('Silakan masukkan alamat email yang valid.'); // Tampilkan pesan kesalahan
+        }
+    });
+
+  
+});

@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <title>Login SignUp | NgajiOnline.id</title>
     <link rel="stylesheet" href="css/Login_signup.css" />
+    <!-- Menyertakan jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="bootstrap-5.3.3-dist\css\bootstrap.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
@@ -35,6 +37,9 @@
                 <a class="nav-link text-success fw-semibold" href="index.html">Home</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link text-success fw-semibold" href="layanan.html">Layanan</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link text-success fw-semibold" href="contact.html">Kontak</a>
               </li>
               <li class="nav-item">
@@ -44,60 +49,42 @@
                 <a class="nav-link text-success fw-semibold active" href="faq.html">FAQ</a>
               </li>
             </ul>
+            <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+              <button type="button" class="btn btn-success" onclick="document.location='logInSignUp.html'">Sign in</button>
+            </div>
           </div>
         </div>
       </nav>
     </header>
 
-
-    
     <div class="container">
       <input type="checkbox" id="flip" />
       <div class="cover">
         <div class="front">
           <img src="img\logIn.jpg" alt="" />
-          <!-- <div class="text">
-            <span class="text-1">Every new friend is a <br> new adventure</span>
-            <span class="text-2">Let's get connected</span>
-          </div> -->
         </div>
         <div class="back">
           <img class="backImg" src="img\SignUp.jpg" alt="" />
-          <!-- <div class="text">
-            <span class="text-1">Complete miles of journey <br> with one step</span>
-            <span class="text-2">Let's get started</span>
-          </div> -->
         </div>
       </div>
       <div class="forms">
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-            <form action="#">
+            <form action="#" id="login">
               <div class="input-boxes">
                 <div class="input-box">
                   <i class="fas fa-envelope"></i>
-                  <input type="text" placeholder="Enter your email" required />
+                  <input id="loginEmail" type="text" placeholder="Enter your email" />
                 </div>
                 <div class="input-box">
                   <i class="fas fa-lock"></i>
-                  <input
-                    type="password"
-                    placeholder="Enter your password"
-                    required
-                  />
+                  <input id="loginPassword" type="password" placeholder="Enter your password" />
                 </div>
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckDefault"
-                />
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                 <label class="form-check-label" for="flexCheckDefault">
                   Remember Me?
                 </label>
-                
-                <!-- <div class="text"><a href="#">Forgot password?</a></div> -->
                 <div class="button input-box">
                   <input type="submit" value="Submit" />
                 </div>
@@ -110,23 +97,19 @@
 
           <div class="signup-form">
             <div class="title">Signup</div>
-            <form action="#">
+            <form action="#" id="signup">
               <div class="input-boxes">
                 <div class="input-box">
                   <i class="fas fa-user"></i>
-                  <input type="text" placeholder="Enter your name" required />
+                  <input type="text" id="signupName" placeholder="Enter your name" />
                 </div>
                 <div class="input-box">
                   <i class="fas fa-envelope"></i>
-                  <input type="text" placeholder="Enter your email" required />
+                  <input type="text" id="signupEmail" placeholder="Enter your email" />
                 </div>
                 <div class="input-box">
                   <i class="fas fa-lock"></i>
-                  <input
-                    type="password"
-                    placeholder="Enter your password"
-                    required
-                  />
+                  <input type="password" placeholder="Enter your password" id="signupPassword" />
                 </div>
                 <div class="button input-box">
                   <input type="submit" value="Submit" />
@@ -140,7 +123,53 @@
         </div>
       </div>
     </div>
+
     <script src="bootstrap-5.3.3-dist\js\bootstrap.bundle.js"></script>
-  </body>
     <script src="js/login.js"></script>
+
+    <!-- Tambahan jQuery -->
+    <script>
+      $(document).ready(function() {
+        console.log("jQuery is working!");
+
+        // Mengganti teks tombol "Sign in" saat halaman dimuat
+        $("button.btn.btn-success").text("Login Sekarang!");
+
+        // Menangani event submit pada form login
+        $("#login").submit(function(event) {
+          event.preventDefault(); // Mencegah submit form default
+
+          // Validasi sederhana
+          var email = $("#loginEmail").val();
+          var password = $("#loginPassword").val();
+
+          if (email === "" || password === "") {
+            alert("Please fill out all fields.");
+          } else {
+            // Jika validasi berhasil, arahkan ke halaman home
+            alert("Login successful! Redirecting to home...");
+            window.location.href = "index.html"; // Arahkan ke halaman home
+          }
+        });
+
+        // Menangani event submit pada form signup (jika diperlukan)
+        $("#signup").submit(function(event) {
+          event.preventDefault(); // Mencegah submit form default
+
+          // Validasi sederhana untuk signup (contoh)
+          var name = $("#signupName").val();
+          var email = $("#signupEmail").val();
+          var password = $("#signupPassword").val();
+
+          if (name === "" || email === "" || password === "") {
+            alert("Please fill out all fields.");
+          } else {
+            // Jika validasi berhasil, arahkan ke halaman home atau tampilkan pesan
+            alert("Signup successful! Redirecting to home...");
+            window.location.href = "index.html"; // Arahkan ke halaman home
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

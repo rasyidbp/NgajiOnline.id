@@ -1,50 +1,43 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Mendapatkan elemen-elemen dari form login dan signup
-    const loginForm = document.querySelector(".login-form form");
-    const signupForm = document.querySelector(".signup-form form");
+$(document).ready(function() {
+    // Tangani pengiriman form login
+    $('#login').on('submit', function(event) {
+      event.preventDefault(); // Hentikan pengiriman form default
+      var email = $('#loginEmail').val();
+      var password = $('#loginPassword').val();
   
-    // Fungsi untuk menangani login
-    loginForm.addEventListener("submit", function (event) {
-      event.preventDefault(); // Mencegah form melakukan submit ke server (default)
-      
-      const email = loginForm.querySelector("input[type='text']").value;
-      const password = loginForm.querySelector("input[type='password']").value;
-  
-      // Validasi sederhana
-      if (email === "" || password === "") {
-        alert("Mohon isi semua kolom.");
-        return;
+      // Validasi panjang kata sandi
+      if (password.length < 6) {
+        alert("Kata sandi harus memiliki minimal 6 karakter.");
+        return; // Hentikan eksekusi jika validasi gagal
       }
   
-      // Proses login
-      console.log("Login dengan email:", email);
-      console.log("Password:", password);
-  
-      // Setelah validasi, bisa kirim data ke server dengan AJAX atau fetch
-      alert("Login sukses!");
+      // Simulasikan proses login
+      if (email && password) {
+        alert("Login berhasil untuk: " + email);
+      } else {
+        alert("Silakan isi semua field.");
+      }
     });
   
-    // Fungsi untuk menangani signup
-    signupForm.addEventListener("submit", function (event) {
-      event.preventDefault(); // Mencegah form melakukan submit ke server (default)
+    // Tangani pengiriman form daftar
+    $('#signup').on('submit', function(event) {
+      event.preventDefault(); // Hentikan pengiriman form default
+      var name = $('#signupName').val();
+      var email = $('#signupEmail').val();
+      var password = $('#signupPassword').val();
   
-      const name = signupForm.querySelector("input[type='text']").value;
-      const email = signupForm.querySelector("input[type='text']:nth-child(2)").value;
-      const password = signupForm.querySelector("input[type='password']").value;
-  
-      // Validasi sederhana
-      if (name === "" || email === "" || password === "") {
-        alert("Mohon isi semua kolom.");
-        return;
+      // Validasi panjang kata sandi
+      if (password.length < 6) {
+        alert("Kata sandi harus memiliki minimal 6 karakter.");
+        return; // Hentikan eksekusi jika validasi gagal
       }
   
-      // Proses signup
-      console.log("Signup dengan nama:", name);
-      console.log("Email:", email);
-      console.log("Password:", password);
-  
-      // Setelah validasi, bisa kirim data ke server dengan AJAX atau fetch
-      alert("Signup sukses!");
+      // Simulasikan proses daftar
+      if (name && email && password) {
+        alert("Daftar berhasil untuk: " + name);
+      } else {
+        alert("Silakan isi semua field.");
+      }
     });
   });
   

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>NgajiOnline.id - FAQ</title>
     <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -37,11 +39,17 @@
           </button>
           <div class="collapse navbar-collapse d-lg-flex" id="navbarNav">
             <a class="navbar-brand col-lg-3 me-0 text-success fw-semibold" href="index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+                <path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+              </svg>
               NgajiOnline.id
             </a>
             <ul class="navbar-nav col-lg-6 justify-content-lg-center">
               <li class="nav-item">
                 <a class="nav-link text-success fw-semibold" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-success fw-semibold" href="layanan.html">Layanan</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-success fw-semibold" href="contact.html">Kontak</a>
@@ -63,7 +71,7 @@
 
     <main class="container my-5">
       <h1 class="text-center my-4">Frequently Asked Questions (FAQ)</h1>
-      
+
       <div class="accordion" id="faqAccordion">
         <div class="accordion-item">
           <h2 class="accordion-header">
@@ -75,7 +83,9 @@
             </div>
           </h2>
           <div id="faq1" class="accordion-body">
-            NgajiOnline.id adalah platform pembelajaran Al-Qur'an dan ilmu agama secara interaktif, di mana Anda dapat belajar kapan saja dan di mana saja bersama pengajar berpengalaman.
+            NgajiOnline.id adalah platform pembelajaran Al-Qur'an dan ilmu agama
+            secara interaktif, di mana Anda dapat belajar kapan saja dan di mana
+            saja bersama pengajar berpengalaman.
           </div>
         </div>
 
@@ -89,7 +99,8 @@
             </div>
           </h2>
           <div id="faq2" class="accordion-body">
-            Anda bisa mendaftar dengan mengklik tombol "Sign Up" di halaman utama, kemudian mengisi form pendaftaran yang tersedia.
+            Anda bisa mendaftar dengan mengklik tombol "Sign Up" di halaman
+            utama, kemudian mengisi form pendaftaran yang tersedia.
           </div>
         </div>
 
@@ -103,7 +114,9 @@
             </div>
           </h2>
           <div id="faq3" class="accordion-body">
-            Kami menawarkan beberapa kelas gratis, namun untuk kelas tertentu dengan pengajar berpengalaman dan konten lebih mendalam, kami menyediakan paket berlangganan yang sangat terjangkau.
+            Kami menawarkan beberapa kelas gratis, namun untuk kelas tertentu
+            dengan pengajar berpengalaman dan konten lebih mendalam, kami
+            menyediakan paket berlangganan yang sangat terjangkau.
           </div>
         </div>
 
@@ -117,27 +130,24 @@
             </div>
           </h2>
           <div id="faq4" class="accordion-body">
-            Anda dapat menghubungi pengajar melalui fitur chat di dalam platform atau mengirimkan pesan melalui halaman kontak yang tersedia.
+            Anda dapat menghubungi pengajar melalui fitur chat di dalam platform
+            atau mengirimkan pesan melalui halaman kontak yang tersedia.
           </div>
         </div>
       </div>
     </main>
 
-    <footer class="bg-success text-white text-center py-3">
+    <footer class="bg-light text-center py-3">
       <div class="container">
         <p>&copy; 2024 NgajiOnline.id. All rights reserved.</p>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-      function toggleFaq(faqNumber) {
-        var body = document.getElementById("faq" + faqNumber);
-        if (body.style.display === "block") {
-          body.style.display = "none";
-        } else {
-          body.style.display = "block";
-        }
-      }
+function toggleFaq(faqNumber) {
+    $("#faq" + faqNumber).toggle();
+  }
     </script>
   </body>
 </html>

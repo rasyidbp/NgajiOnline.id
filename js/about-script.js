@@ -1,20 +1,37 @@
+// Animasi sederhana untuk anggota tim saat di-scroll menggunakan jQuery
+$(document).ready(function () {
 
+    // Mengambil semua elemen tim
+    var teamMembers = $(".team-member");
 
-        // Simple animation for team members on scroll
-        var teamMembers = document.querySelectorAll('.team-member');
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
+    // Menyembunyikan semua anggota tim di awal
+    teamMembers.hide();
 
-        teamMembers.forEach(function (member) {
-            member.style.opacity = 0;
-            member.style.transform = 'translateY(20px)';
-            member.style.transition = 'opacity 0.5s, transform 0.5s';
-            observer.observe(member);
+    // Fungsi untuk mengecek apakah elemen terlihat di layar
+    function isVisible(element) {
+        var windowTop = $(window).scrollTop();
+        var windowBottom = windowTop + $(window).height();
+        var elementTop = element.offset().top;
+        var elementBottom = elementTop + element.height();
+
+        return elementBottom > windowTop && elementTop < windowBottom;
+    }
+
+    // Fungsi untuk menampilkan anggota tim
+    function showTeamMembers() {
+        teamMembers.each(function () {
+            if (isVisible($(this))) {
+                $(this).show();
+                $(this).css("opacity", "1");
+            }
         });
-    
+    }
+
+    // Menjalankan fungsi saat halaman di-scroll
+    $(window).on("scroll", function () {
+        showTeamMembers();
+    });
+
+    // Menjalankan fungsi sekali saat halaman dimuat
+    showTeamMembers();
+});

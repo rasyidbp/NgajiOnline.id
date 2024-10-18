@@ -1,26 +1,25 @@
+$(document).ready(function() {
+    // Menangani pengiriman formulir
+    $('.contact-form').on('submit', function(event) {
+        event.preventDefault(); // Mencegah pengiriman formulir secara default
+        
+        // Mengambil nilai formulir
+        var name = $('#name').val().trim();
+        var email = $('#email').val().trim();
+        var message = $('#message').val().trim();
 
-        // Simple form submission handling
-        document.querySelector('.contact-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for your message. We will get back to you soon!');
-            this.reset();
-        });
+        // Validasi sederhana
+        if (name === '' || email === '' || message === '') {
+            alert('Semua kolom harus diisi!');
+            return;
+        }
 
-        // Simple animation for FAQ items on scroll
-        var faqItems = document.querySelectorAll('.faq-item');
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
+        // Mensimulasikan pengiriman yang berhasil
+        alert('Terima kasih, ' + name + '! Pesan Anda telah dikirim.');
 
-        faqItems.forEach(function (item) {
-            item.style.opacity = 0;
-            item.style.transform = 'translateY(50px)';
-            item.style.transition = 'opacity 0.5s, transform 0.5s';
-            observer.observe(item);
-        });
-    
+        // Mengosongkan kolom formulir
+        $('#name').val('');
+        $('#email').val('');
+        $('#message').val('');
+    });
+});
