@@ -18,7 +18,7 @@
   ![Tampilan kontak](https://github.com/rasyidbp/NgajiOnline.id/blob/main/forReadme/contact.png)  
 
 ✅ **Desain Responsif:** Tampilan platform optimal di perangkat desktop dan seluler.  
-![Tampilan responsive index](https://github.com/rasyidbp/NgajiOnline.id/blob/main/forReadme/respIndex.png)
+  ![Tampilan responsive index](https://github.com/rasyidbp/NgajiOnline.id/blob/main/forReadme/respIndex.png)
 
 ---
 
