@@ -2,155 +2,346 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NgajiOnline.id - Tentang Kami</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - NgajiOnline.id</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/about-styles.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <!-- Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse d-lg-flex" id="navbarNav">
-          <a class="navbar-brand col-lg-3 me-0 text-success fw-semibold" href="index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
-              <path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-            </svg>
-            NgajiOnline.id
-          </a>
-          <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-            <li class="nav-item">
-              <a class="nav-link text-success fw-semibold" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-success fw-semibold" href="layanan.html">Layanan</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-success fw-semibold" href="contact.html">Kontak</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-success fw-semibold" href="about.html">Tentang Kami</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-success fw-semibold active" href="faq.html">FAQ</a>
-            </li>
-          </ul>
-          <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-            <button type="button" class="btn btn-success" onclick="document.location='logInSignUp.html'">Sign in</button>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Tentang NgajiOnline.id</h1>
-                <p>Pelajari tentang visi & misi dan tim di balik NgajiOnline.id</p>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-book-quran me-2"></i>NgajiOnline.id</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="community.html">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="belajar_online.html">Belajar Online</a>
+                    </li>
+                </ul>
+                <a href="login-signin.html" class="btn btn-primary ms-lg-3">Get Started</a>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section class="about">
+    <header class="hero">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Our Journey in Quran Education</h1>
+            <p class="lead mb-5">
+                Empowering Muslims worldwide to perfect their Quran recitation through
+                innovative technology and expert guidance.
+            </p>
+            <a href="#" class="btn btn-light btn-lg">Learn More</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-5">
             <div class="container">
-                <div class="about-grid">
-                    <div class="about-content">
-                        <h2>Tentang NgajiOnline.id</h2>
-                        <p>Website NgajiOnline.id didirikan dengan tujuan untuk membantu umat Muslim belajar membaca dan memahami Al-Quran dengan mudah melalui platform digital.</p>
-
+                <h2 class="section-title text-center mb-5">Our Mission</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="text-center animate-on-scroll">
+                            <i class="fas fa-book-reader feature-icon"></i>
+                            <h3 class="h4 mb-3">Accessible Learning</h3>
+                            <p>
+                                Making Quran education accessible to everyone, anywhere in the
+                                world.
+                            </p>
+                        </div>
                     </div>
-                    <div class="about-image">
-                        <img src="img/indexJumbo.png" alt="QuranRecite Team">
+                    <div class="col-md-4">
+                        <div class="text-center animate-on-scroll">
+                            <i class="fas fa-users feature-icon"></i>
+                            <h3 class="h4 mb-3">Community Building</h3>
+                            <p>
+                                Fostering a global community of Quran learners and
+                                enthusiasts.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center animate-on-scroll">
+                            <i class="fas fa-graduation-cap feature-icon"></i>
+                            <h3 class="h4 mb-3">Continuous Improvement</h3>
+                            <p>
+                                Constantly innovating our teaching methods and technology.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="values">
+        <section class="py-5 bg-light">
             <div class="container">
-                <h2>Visi</h2>
-                <p>Menyebarkan ilmu Al-Quran ke seluruh dunia melalui teknologi digital.</p>
-                <br><br>
-      
-                <h2>Misi</h2>
-                  <p>Menyediakan layanan mengaji online berkualitas tinggi.</p>
-                  <p>Memberikan bimbingan yang personal dan profesional.</p>
-                  <p>Mengembangkan bahan ajar yang relevan dan mudah dipahami.</p>
+                <h2 class="section-title text-center mb-5">Our Team</h2>
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="team-member text-center animate-on-scroll">
+                            <img src="img/img1.jpg" alt="Team Member 1" class="mb-3" />
+                            <h3 class="h5 mb-1">Albiona Qalbu Shoukh</h3>
+                            <p class="text-muted">Founder & CEO</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member text-center animate-on-scroll">
+                            <img src="img/img1.jpg" alt="Team Member 2" class="mb-3" />
+                            <h3 class="h5 mb-1"> ⁠Muh. Rifai </h3>
+                            <p class="text-muted">Lead Instructor</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member text-center animate-on-scroll">
+                            <img src="img/img1.jpg" alt="Team Member 3" class="mb-3" />
+                            <h3 class="h5 mb-1">Indah Ramayani</h3>
+                            <p class="text-muted">Tech Lead</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member text-center animate-on-scroll">
+                            <img src="img/img1.jpg" alt="Team Member 4" class="mb-3" />
+                            <h3 class="h5 mb-1">Nisrina Rona Salsabila</h3>
+                            <p class="text-muted">Community Manager</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member text-center animate-on-scroll">
+                            <img src="img/img1.jpg" alt="Team Member 1" class="mb-3" />
+                            <h3 class="h5 mb-1">Rasyid Binaya Pribadi </h3>
+                            <p class="text-muted">Founder & CEO</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member text-center animate-on-scroll">
+                            <img src="img/img1.jpg" alt="Team Member 2" class="mb-3" />
+                            <h3 class="h5 mb-1">Taufiqurohman Yuares</h3>
+                            <p class="text-muted">Lead Instructor</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member text-center animate-on-scroll">
+                            <img src="img/img1.jpg" alt="Team Member 3" class="mb-3" />
+                            <h3 class="h5 mb-1">Intan Nisfah Ramadhani</h3>
+                            <p class="text-muted">Tech Lead</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member text-center animate-on-scroll">
+                            <img src="img/img1.jpg" alt="Team Member 4" class="mb-3" />
+                            <h3 class="h5 mb-1">Camelia Savitr</h3>
+                            <p class="text-muted">Community Manager</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="team">
+        <section class="py-5">
             <div class="container">
-                <h2>Tim Kami</h2>
-                <div class="members">
-                    <div class="team-member">
-                      <img src="img/img1.jpg" alt="Albiona Qalbu Shoukhi"/>
-                      <h4>Albiona Qalbu Shoukhi</h4>
-                      
+                <h2 class="section-title text-center mb-5">Our Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content animate-on-scroll">
+                            <span class="timeline-date">2014</span>
+                            <h3 class="h5 mb-3">The Beginning</h3>
+                            <p>
+                                NgajiOnline.id was founded with a vision to make Quran education
+                                accessible globally.
+                            </p>
+                        </div>
                     </div>
-                    <div class="team-member">
-                      <img src="img/img1.jpg" alt="Rasyid Binaya Pribadi"/>
-                      <h4>Rasyid Binaya Pribadi</h4>
-                      
+                    <div class="timeline-item">
+                        <div class="timeline-content animate-on-scroll">
+                            <span class="timeline-date">2016</span>
+                            <h3 class="h5 mb-3">Mobile App Launch</h3>
+                            <p>
+                                We launched our first mobile app, reaching thousands of users
+                                worldwide.
+                            </p>
+                        </div>
                     </div>
-                    <div class="team-member">
-                      <img src="img/img1.jpg" alt="Indah Rahmayani"/>
-                      <h4>Indah Rahmayani</h4>
-                      
+                    <div class="timeline-item">
+                        <div class="timeline-content animate-on-scroll">
+                            <span class="timeline-date">2018</span>
+                            <h3 class="h5 mb-3">AI-Powered Learning</h3>
+                            <p>
+                                Introduced AI-powered personalized learning paths for each
+                                student.
+                            </p>
+                        </div>
                     </div>
-                    <div class="team-member">
-                      <img src="img/img1.jpg" alt="Nisrina Rona Salsabilah"/>
-                      <h4>Nisrina Rona Salsabilah</h4>
-                      
+                    <div class="timeline-item">
+                        <div class="timeline-content animate-on-scroll">
+                            <span class="timeline-date">2020</span>
+                            <h3 class="h5 mb-3">Global Recognition</h3>
+                            <p>
+                                Received the "Best Islamic Education Platform" award at the
+                                Global Islamic Tech Summit.
+                            </p>
+                        </div>
                     </div>
-                    <div class="team-member">
-                      <img src="img/img1.jpg" alt="Muh. Rifai"/>
-                      <h4>Muh. Rifai</h4>
-                      
+                    <div class="timeline-item">
+                        <div class="timeline-content animate-on-scroll">
+                            <span class="timeline-date">2023</span>
+                            <h3 class="h5 mb-3">1 Million Users</h3>
+                            <p>
+                                Celebrated reaching 1 million active users across 150
+                                countries.
+                            </p>
+                        </div>
                     </div>
-                    <div class="team-member">
-                      <img src="img/img1.jpg" alt="Taufiqurrohman Yuares"/>
-                      <h4>Taufiqurrohman Yuares</h4>
-                      
-                    </div>
-                    <div class="team-member">
-                      <img src="img/img1.jpg" alt="Intan Nisfah Ramadhani"/>
-                      <h4>Intan Nisfah Ramadhani</h4>
-                      
-                    </div>
-                    <div class="team-member">
-                      <img src="img/img1.jpg" alt="Camelia Savitri"/>
-                      <h4>Camelia Savitri</h4>
-                      
-                    </div>
-                  </div>
+                </div>
             </div>
         </section>
 
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">What Our Students Say</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial text-center animate-on-scroll">
+                            <img src="img/img1.jpg" alt="Student 1" class="mx-auto" />
+                            <h3 class="h5 mb-3">Zainab M.</h3>
+                            <p class="mb-3">
+                                "QuranRecite has transformed my Quran journey. The
+                                personalized lessons and expert guidance have improved my
+                                recitation immensely."
+                            </p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial text-center animate-on-scroll">
+                            <img src="img/img1.jpg" alt="Student 2" class="mx-auto" />
+                            <h3 class="h5 mb-3">Yusuf A.</h3>
+                            <p class="mb-3">
+                                "The community aspect of QuranRecite is amazing. I've
+                                connected with fellow learners worldwide, which keeps me
+                                motivated."
+                            </p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial text-center animate-on-scroll">
+                            <img src="img/img1.jpg" alt="Student 3" class="mx-auto" />
+                            <h3 class="h5 mb-3">Amina S.</h3>
+                            <p class="mb-3">
+                                "As a busy professional, the flexibility of QuranRecite's
+                                platform has been a game-changer for my Quran studies."
+                            </p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="py-5">
+            <div class="container text-center">
+                <h2 class="section-title mb-5">Ready to Start Your Quran Journey?</h2>
+                <p class="lead mb-4">
+                    Join thousands of students worldwide and embark on a transformative
+                    Quran learning experience.
+                </p>
+                <a href="#" class="btn btn-primary btn-lg">Get Started Now</a>
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <footer class="bg-dark text-light py-5">
         <div class="container">
-            <p>&copy; 2024 NgajiOnline.id. All rights reserved.</p>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="h5 mb-3">About NgajiOnline.id</h3>
+                    <p>
+                        Empowering Muslims worldwide to perfect their Quran recitation
+                        through innovative technology and expert guidance.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h5 mb-3">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="belajar_online.html">Belajar Online</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h5 mb-3">Connect With Us</h3>
+                    <div class="social-icons mb-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <p>Subscribe to our newsletter:</p>
+                    <form class="row g-2">
+                        <div class="col-auto">
+                            <input type="email" class="form-control" placeholder="Enter your email" />
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4" />
+            <p class="text-center mb-0">
+                &copy; 2024 NgajiOnline.id. All rights reserved.
+            </p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/about-script.js"></script>
 </body>
 

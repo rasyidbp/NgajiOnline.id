@@ -42,11 +42,26 @@ $(document).ready(function () {
         }
     });
 
-    // Form submission
-    $("#contactForm").on("submit", function (e) {
-        e.preventDefault();
-        // Here you would typically send the form data to your backend
-        alert("Thank you for your message. We will get back to you soon!");
-        this.reset();
+    // Mobile menu toggle
+    $(".navbar-toggler").on("click", function () {
+        $(".navbar-collapse").slideToggle();
+    });
+
+    // Close mobile menu on click outside
+    $(document).on("click", function (event) {
+        var $navbar = $(".navbar-collapse");
+        var $toggle = $(".navbar-toggler");
+
+        if (
+            !$toggle.is(event.target) &&
+            $toggle.has(event.target).length === 0 &&
+            !$navbar.is(event.target) &&
+            $navbar.has(event.target).length === 0 &&
+            $navbar.hasClass("show")
+        ) {
+            $navbar.slideUp();
+            $toggle.removeClass("collapsed");
+            $toggle.attr("aria-expanded", "false");
+        }
     });
 });

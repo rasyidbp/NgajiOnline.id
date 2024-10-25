@@ -36,9 +36,9 @@ $(document).ready(function () {
     // Navbar background change on scroll
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
-            $(".navbar").addClass("bg-white shadow");
+            $(".navbar").addClass("scrolled");
         } else {
-            $(".navbar").removeClass("bg-white shadow");
+            $(".navbar").removeClass("scrolled");
         }
     });
 
@@ -62,6 +62,46 @@ $(document).ready(function () {
             $navbar.slideUp();
             $toggle.removeClass("collapsed");
             $toggle.attr("aria-expanded", "false");
+        }
+    });
+
+    // Animate stats numbers
+    function animateStats() {
+        $(".stats-number").each(function () {
+            var $this = $(this);
+            var target = parseInt($this.attr("data-target"));
+            var current = 0;
+            var increment = target / 100;
+
+            var timer = setInterval(function () {
+                current += increment;
+                $this.text(Math.round(current).toLocaleString());
+
+                if (current >= target) {
+                    clearInterval(timer);
+                    $this.text(target.toLocaleString());
+                }
+            }, 20);
+        });
+    }
+
+    // Trigger stats animation when the section comes into view
+    var statsSection = $(".stats-item").parent().parent();
+    var statsSectionTop = statsSection.offset().top;
+    var statsSectionBottom = statsSectionTop + statsSection.outerHeight();
+    var windowHeight = $(window).height();
+    var hasAnimated = false;
+
+    $(window).on("scroll", function () {
+        var scrollPosition = $(window).scrollTop() + windowHeight;
+
+        if (
+            scrollPosition > statsSectionTop &&
+            scrollPosition < statsSectionBottom &&
+            !hasAnimated
+        ) {
+            animateStats();
+            hasAnimated = true;
         }
     });
 });

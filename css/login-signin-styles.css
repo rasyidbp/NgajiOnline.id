@@ -1,3 +1,4 @@
+
 :root {
     --green-50: #f0fdf4;
     --green-100: #dcfce7;
@@ -76,63 +77,93 @@ body {
     z-index: 1;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    position: relative;
-    display: inline-block;
+.auth-form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.section-title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 50px;
-    height: 4px;
-    background-color: var(--green-600);
-}
-
-.contact-info-item {
-    display: flex;
-    align-items: center;
+.auth-form .nav-tabs {
+    border-bottom: none;
     margin-bottom: 1.5rem;
 }
 
-.contact-info-item i {
-    font-size: 1.5rem;
-    color: var(--green-600);
+.auth-form .nav-tabs .nav-link {
+    border: none;
+    color: var(--green-700);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
     margin-right: 1rem;
+    transition: all 0.3s ease;
 }
 
-.contact-form {
-    background-color: white;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.auth-form .nav-tabs .nav-link.active {
+    color: var(--green-600);
+    border-bottom: 2px solid var(--green-600);
 }
 
-.form-control:focus {
+.auth-form .form-control:focus {
     border-color: var(--green-600);
     box-shadow: 0 0 0 0.2rem rgba(22, 163, 74, 0.25);
 }
 
-.faq-section {
-    background-color: white;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.social-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
 }
 
-.accordion-button:not(.collapsed) {
+.social-login a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.social-login a:hover {
     background-color: var(--green-100);
-    color: var(--green-800);
+    color: var(--green-600);
+    transform: translateY(-2px);
 }
 
-.accordion-button:focus {
-    border-color: var(--green-600);
-    box-shadow: 0 0 0 0.2rem rgba(22, 163, 74, 0.25);
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--green-600);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover .feature-icon {
+    transform: scale(1.1);
 }
 
 footer {
@@ -167,17 +198,6 @@ footer a:hover {
 .social-icons a:hover {
     background-color: var(--green-700);
     transform: translateY(-3px);
-}
-
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.animate-on-scroll.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 @media (max-width: 768px) {

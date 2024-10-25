@@ -43,10 +43,15 @@ $(document).ready(function () {
     });
 
     // Form submission
-    $("#contactForm").on("submit", function (e) {
+    $("#loginForm").on("submit", function (e) {
         e.preventDefault();
-        // Here you would typically send the form data to your backend
-        alert("Thank you for your message. We will get back to you soon!");
-        this.reset();
+        // Here you would typically send the login data to your backend
+        alert("Login functionality would be implemented here.");
+    });
+
+    $("#signupForm").on("submit", function (e) {
+        e.preventDefault();
+        // Here you would typically send the signup data to your backend
+        alert("Sign up functionality would be implemented here.");
     });
 });

@@ -1,3 +1,4 @@
+
 :root {
     --green-50: #f0fdf4;
     --green-100: #dcfce7;
@@ -94,45 +95,40 @@ body {
     background-color: var(--green-600);
 }
 
-.contact-info-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.contact-info-item i {
-    font-size: 1.5rem;
-    color: var(--green-600);
+.community-tabs .nav-link {
+    color: var(--green-700);
+    border: none;
+    padding: 0.5rem 1rem;
     margin-right: 1rem;
+    font-weight: 600;
 }
 
-.contact-form {
+.community-tabs .nav-link.active {
+    color: var(--green-600);
+    border-bottom: 2px solid var(--green-600);
+}
+
+.community-content {
     background-color: white;
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.form-control:focus {
-    border-color: var(--green-600);
-    box-shadow: 0 0 0 0.2rem rgba(22, 163, 74, 0.25);
-}
-
-.faq-section {
-    background-color: white;
+.discussion-item,
+.member-item,
+.event-item {
+    background-color: var(--green-50);
     border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
-.accordion-button:not(.collapsed) {
-    background-color: var(--green-100);
-    color: var(--green-800);
-}
-
-.accordion-button:focus {
-    border-color: var(--green-600);
-    box-shadow: 0 0 0 0.2rem rgba(22, 163, 74, 0.25);
+.member-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 footer {
