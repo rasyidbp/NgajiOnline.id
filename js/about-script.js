@@ -1,68 +1,59 @@
 "use strict";
 
-$(document).ready(function () {
-    // Smooth scrolling for anchor links
-    $('a[href^="#"]').on("click", function (event) {
-        var target = $(this.getAttribute("href"));
-        if (target.length) {
-            event.preventDefault();
-            $("html, body")
-                .stop()
-                .animate(
-                    {
-                        scrollTop: target.offset().top - 70,
-                    },
-                    1000
-                );
-        }
-    });
-
-    // Animate elements on scroll
-    function animateOnScroll() {
-        $(".animate-on-scroll").each(function () {
-            var elementTop = $(this).offset().top;
-            var elementBottom = elementTop + $(this).outerHeight();
-            var viewportTop = $(window).scrollTop();
-            var viewportBottom = viewportTop + $(window).height();
-
-            if (elementBottom > viewportTop && elementTop < viewportBottom) {
-                $(this).addClass("show");
-            }
+document.addEventListener("DOMContentLoaded", function () {
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (event) {
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        event.preventDefault();
+        window.scrollTo({
+          top: target.offsetTop - 70,
+          behavior: "smooth"
         });
+      }
+    });
+  });
+
+  // Animate elements on scroll
+  function animateOnScroll() {
+    document.querySelectorAll(".animate-on-scroll").forEach(element => {
+      const rect = element.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        element.classList.add("show");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", animateOnScroll);
+  animateOnScroll(); // Run once on page load
+
+  // Navbar background change on scroll
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("bg-white", "shadow");
+    } else {
+      navbar.classList.remove("bg-white", "shadow");
     }
+  });
 
-    $(window).on("scroll", animateOnScroll);
-    animateOnScroll(); // Run once on page load
+  // Mobile menu toggle
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
 
-    // Navbar background change on scroll
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 50) {
-            $(".navbar").addClass("bg-white shadow");
-        } else {
-            $(".navbar").removeClass("bg-white shadow");
-        }
-    });
+  navbarToggler.addEventListener("click", function () {
+    navbarCollapse.classList.toggle("show");
+  });
 
-    // Mobile menu toggle
-    $(".navbar-toggler").on("click", function () {
-        $(".navbar-collapse").slideToggle();
-    });
-
-    // Close mobile menu on click outside
-    $(document).on("click", function (event) {
-        var $navbar = $(".navbar-collapse");
-        var $toggle = $(".navbar-toggler");
-
-        if (
-            !$toggle.is(event.target) &&
-            $toggle.has(event.target).length === 0 &&
-            !$navbar.is(event.target) &&
-            $navbar.has(event.target).length === 0 &&
-            $navbar.hasClass("show")
-        ) {
-            $navbar.slideUp();
-            $toggle.removeClass("collapsed");
-            $toggle.attr("aria-expanded", "false");
-        }
-    });
+  // Close mobile menu on click outside
+  document.addEventListener("click", function (event) {
+    if (
+      !navbarToggler.contains(event.target) &&
+      !navbarCollapse.contains(event.target) &&
+      navbarCollapse.classList.contains("show")
+    ) {
+      navbarCollapse.classList.remove("show");
+    }
+  });
 });
