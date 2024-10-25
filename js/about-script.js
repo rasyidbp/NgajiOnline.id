@@ -1,3 +1,4 @@
+"use strict";
 
 $(document).ready(function () {
     // Smooth scrolling for anchor links
