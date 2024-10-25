@@ -4,25 +4,18 @@
 
 ---
 
-## 🚀 Fitur Unggulan  
-### 🌱 **Modul Pembelajaran Terstruktur**  
-- **Belajar Online:** Menyediakan langkah-langkah pembelajaran untuk memperbaiki kemampuan membaca dan memahami Al-Qur'an secara mandiri.  
-
-### 👥 **Forum Komunitas untuk Kolaborasi**  
-- **Forum Komunitas:** Tempat bagi pengguna untuk berdiskusi, bertukar wawasan, dan mempererat ukhuwah Islamiah melalui diskusi yang bermanfaat.  
-
-### 🔒 **Akses Aman dan Mudah**  
-- **Login & Registrasi:** Setiap pengguna dapat membuat akun pribadi untuk menyimpan progres pembelajaran dan mengakses konten yang dipersonalisasi.  
-
----
-
 ## 📈 Capaian dan Perkembangan  
 ✅ **Beragam Halaman Utama:**  
 - **Beranda (index.html):** Menyajikan sekilas tentang platform dan fitur utama.  
+- ![Tampilan index](https://github.com/rasyidbp/NgajiOnline.id/blob/main/forReadme/index.png)  
 - **Tentang Kami (about.html):** Informasi tentang misi dan tujuan pengembangan platform.  
+- ![Tampilan tentang kami](https://github.com/rasyidbp/NgajiOnline.id/blob/main/forReadme/about.png)  
 - **Belajar Online:** Akses ke materi belajar Al-Qur’an secara sistematis.  
+- ![Tampilan belajar online](https://github.com/rasyidbp/NgajiOnline.id/blob/main/forReadme/belajarOnline.png)  
 - **Forum Komunitas:** Tempat diskusi dan interaksi dengan komunitas.  
+- ![Tampilan komunitas](https://github.com/rasyidbp/NgajiOnline.id/blob/main/forReadme/community.png)  
 - **Kontak Kami:** Formulir untuk pengiriman pesan dan pertanyaan kepada tim kami.  
+- ![Tampilan kontak](https://github.com/rasyidbp/NgajiOnline.id/blob/main/forReadme/contact.png)  
 
 ✅ **Desain Responsif:** Tampilan platform optimal di perangkat desktop dan seluler.  
 
