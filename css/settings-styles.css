@@ -1,0 +1,52 @@
+/* settings-styles.css */
+.settings-main {
+    padding-top: 80px;
+}
+
+.nav-pills .nav-link {
+    color: var(--green-700);
+    border-radius: 0;
+    padding: 10px 15px;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--green-600);
+    color: white;
+}
+
+.tab-content {
+    background-color: white;
+    border-radius: 0 0.25rem 0.25rem 0.25rem;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-check-input:checked {
+    background-color: var(--green-600);
+    border-color: var(--green-600);
+}
+
+.btn-primary {
+    background-color: var(--green-600);
+    border-color: var(--green-600);
+}
+
+.btn-primary:hover {
+    background-color: var(--green-700);
+    border-color: var(--green-700);
+}
+
+@media (max-width: 767px) {
+    .nav-pills {
+        flex-direction: row !important;
+        margin-bottom: 20px;
+    }
+
+    .nav-pills .nav-link {
+        margin-right: 10px;
+    }
+
+    .tab-content {
+        border-radius: 0.25rem;
+    }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NgajiOnline.id - User Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index-styles.css">
+    <link rel="stylesheet" href="css/user-dashboard-styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index-home.html"><i class="fas fa-book-quran me-2"></i>NgajiOnline.id</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#my-courses">Kelas Saya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#progress">Progres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#community">Komunitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html?from=dashboard">Profil</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="settings.html">Pengaturan</a>
+                    </li>
+                </ul>
+                <a href="#" id="logout-btn" class="btn btn-outline-primary ms-lg-3">Keluar</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <div class="container mt-5 pt-5">
+            <h1 class="mb-4">Selamat Datang, <span id="user-name">User</span>!</h1>
+
+            <section id="dashboard" class="mb-5">
+                <h2 class="section-title">Dashboard</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Profil Singkat</h5>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img id="profile-picture-small" src="https://via.placeholder.com/50" alt="Profile Picture" class="rounded-circle me-3">
+                                    <div>
+                                        <h6 id="profile-name-small" class="mb-0">Nama Pengguna</h6>
+                                        <small class="text-muted">Member sejak: <span id="member-since-small">January 2023</span></small>
+                                    </div>
+                                </div>
+                                <a href="profile.html?from=dashboard" class="btn btn-primary">Lihat Profil Lengkap</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Kelas Berikutnya</h5>
+                                <p class="card-text">Tahsin Al-Quran dengan Ustadz Ahmad</p>
+                                <p class="card-text"><small class="text-muted">Hari ini, 19:00 WIB</small></p>
+                                <a href="#" class="btn btn-primary">Masuk Kelas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="my-courses" class="mb-5">
+                <h2 class="section-title">Kelas Saya</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="https://i.pinimg.com/474x/db/32/f1/db32f10fd855c64b92a747093467f588.jpg"
+                                class="card-img-top" alt="Tahsin Al-Quran">
+                            <div class="card-body">
+                                <h5 class="card-title">Tahsin Al-Quran</h5>
+                                <p class="card-text">Progres: 60%</p>
+                                <a href="course-content.html" class="btn btn-primary">Lanjutkan Belajar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="https://i.pinimg.com/474x/db/32/f1/db32f10fd855c64b92a747093467f588.jpg"
+                                class="card-img-top" alt="Program Tahfidz">
+                            <div class="card-body">
+                                <h5 class="card-title">Program Tahfidz</h5>
+                                <p class="card-text">Progres: 40%</p>
+                                <a href="#" class="btn btn-primary">Lanjutkan Belajar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="https://i.pinimg.com/474x/db/32/f1/db32f10fd855c64b92a747093467f588.jpg"
+                                class="card-img-top" alt="Dasar Al-Quran">
+                            <div class="card-body">
+                                <h5 class="card-title">Dasar Al-Quran</h5>
+                                <p class="card-text">Progres: 80%</p>
+                                <a href="#" class="btn btn-primary">Lanjutkan Belajar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="progress" class="mb-5">
+                <h2 class="section-title">Progres Belajar</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Statistik Belajar</h5>
+                        <canvas id="learningChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="community" class="mb-5">
+                <h2 class="section-title">Komunitas</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Forum Diskusi</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Diskusi Tajwid
+                                <span class="badge bg-primary rounded-pill">14</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Tanya Ustadz
+                                <span class="badge bg-primary rounded-pill">2</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Sharing Pengalaman
+                                <span class="badge bg-primary rounded-pill">1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="h5 mb-3">Tentang NgajiOnline.id</h3>
+                    <p>
+                        Memberdayakan umat Islam untuk menyempurnakan
+                        bacaan Al-Qur'an mereka melalui teknologi inovatif dan bimbingan
+                        ahli.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h5 mb-3">Tautan Cepat</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#">Kelas</a></li>
+                        <li><a href="#">Komunitas</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h5 mb-3">Hubungi Kami</h3>
+                    <div class="social-icons mb-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <p>Berlangganan newsletter kami:</p>
+                    <form class="row g-2">
+                        <div class="col-auto">
+                            <input type="email" class="form-control" placeholder="Email Anda" />
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Berlangganan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4" />
+            <p class="text-center mb-0">
+                &copy; 2024 NgajiOnline.id. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/user-dashboard-script.js"></script>
+</body>
+
+</html>

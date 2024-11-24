@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NgajiOnline.id</title>
+    <title>NgajiOnline.id - Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/index-styles.css">
@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><i class="fas fa-book-quran me-2"></i>NgajiOnline.id</a>
+            <a class="navbar-brand" href="index-home.html"><i class="fas fa-book-quran me-2"></i>NgajiOnline.id</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,10 +21,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Beranda</a>
+                        <a class="nav-link active" href="index-home.html">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">Fitur</a>
+                        <a class="nav-link" href="index-home.html#features">Fitur</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="courses.html">Kelas</a>
@@ -39,7 +39,18 @@
                         <a class="nav-link" href="contact.html">Kontak</a>
                     </li>
                 </ul>
-                <a href="signup.html" class="btn btn-primary ms-lg-3">Mulai Sekarang</a>
+                <div class="dropdown ms-lg-3">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle me-2"></i>Akun Saya
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="user-dashboard.html">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="profile.html?from=home">Profil</a></li>
+                        <li><a class="dropdown-item" href="settings.html">Pengaturan</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="logout.html">Keluar</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -49,18 +60,15 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content">
                     <h1 class="display-4 fw-bold mb-4 animate-on-scroll">
-                        NgajiOnline.id
+                        Selamat Datang di NgajiOnline.id
                     </h1>
                     <p class="lead mb-5 animate-on-scroll">
-                        Belajar Al-Qur'an dan ilmu agama secara interaktif di mana saja
-                        dan kapan saja.
-                        Dapatkan akses belajar bersama pengajar
-                        berpengalaman, serta materi yang dirancang untuk semua jenjang
-                        pendidikan.
+                        Lanjutkan perjalanan belajar Al-Qur'an Anda dengan akses ke kelas-kelas interaktif,
+                        materi pembelajaran yang komprehensif, dan komunitas yang mendukung.
                     </p>
                     <div class="animate-on-scroll">
-                        <a href="signup.html" class="btn btn-light btn-lg me-3">Mulai Sekarang</a>
-                        <a href="learn-more.html" class="btn btn-outline-light btn-lg">Pelajari Lebih Lanjut</a>
+                        <a href="courses.html" class="btn btn-light btn-lg me-3">Jelajahi Kelas</a>
+                        <a href="user-dashboard.html" class="btn btn-outline-light btn-lg">Dashboard</a>
                     </div>
                 </div>
                 <div class="col-lg-6 d-none d-lg-block">
@@ -125,93 +133,30 @@
                     </div>
                     <div class="col-lg-6">
                         <h2 class="section-title mb-4">
-                            Belajar Mengaji dengan Cara yang Tepat
+                            Lanjutkan Perjalanan Belajar Al-Qur'an Anda
                         </h2>
                         <p class="lead mb-4">
-                            Platform kami menggabungkan metode pengajaran tradisional
-                            dengan teknologi terkini untuk memberikan pengalaman belajar
-                            Al-Qur'an terbaik.
+                            Dengan NgajiOnline.id, Anda memiliki akses ke berbagai fitur dan sumber daya
+                            untuk meningkatkan pemahaman dan bacaan Al-Qur'an Anda.
                         </p>
                         <ul class="list-unstyled">
                             <li class="mb-3 animate-on-scroll">
                                 <i class="fas fa-check-circle text-success me-2"></i>
-                                Pelajaran video dipimpin oleh ahli
+                                Lanjutkan pelajaran dari tempat Anda berhenti
                             </li>
                             <li class="mb-3 animate-on-scroll">
                                 <i class="fas fa-check-circle text-success me-2"></i>
-                                Kuis dan latihan interaktif
+                                Akses ke materi pembelajaran eksklusif
                             </li>
                             <li class="mb-3 animate-on-scroll">
                                 <i class="fas fa-check-circle text-success me-2"></i>
-                                Pelacakan kemajuan dan umpan balik personal
+                                Pantau kemajuan belajar Anda
                             </li>
                             <li class="animate-on-scroll">
                                 <i class="fas fa-check-circle text-success me-2"></i>
-                                Sesi bimbingan one-on-one
+                                Dapatkan umpan balik dari instruktur berpengalaman
                             </li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="py-5">
-            <div class="container">
-                <h2 class="section-title text-center mb-5">Apa Kata Siswa Kami</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="testimonial text-center animate-on-scroll">
-                            <img src="img/img1.jpg" alt="Student 1" class="mx-auto" />
-                            <h3 class="h5 mb-3">Ahmed S.</h3>
-                            <p class="mb-3">
-                                "NgajiOnline.id telah mengubah perjalanan belajar mengaji saya.
-                                Bimbingan ahli dan pelajaran interaktif sangat meningkatkan
-                                kepercayaan diri saya."
-                            </p>
-                            <div class="text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="testimonial text-center animate-on-scroll">
-                            <img src="img/img1.jpg" alt="Student 2" class="mx-auto" />
-                            <h3 class="h5 mb-3">Fatima R.</h3>
-                            <p class="mb-3">
-                                "Jalur pembelajaran yang dipersonalisasi dan pelacakan
-                                kemajuan membuat perjalanan belajar Al-Qur'an saya jauh
-                                lebih efektif dan menyenangkan."
-                            </p>
-                            <div class="text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="testimonial text-center animate-on-scroll">
-                            <img src="img/img1.jpg" alt="Student 3" class="mx-auto" />
-                            <h3 class="h5 mb-3">Omar K.</h3>
-                            <p class="mb-3">
-                                "Sebagai profesional yang sibuk, fleksibilitas platform
-                                NgajiOnline.id sangat membantu studi Al-Qur'an saya. Saya
-                                bisa belajar kapan saja, di mana saja."
-                            </p>
-                            <div class="text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -220,72 +165,84 @@
         <section id="courses" class="py-5">
             <div class="container">
                 <h2 class="section-title text-center mb-5">Rekomendasi Kelas</h2>
-                <div class="row g-4">
-                <div class="course-grid">
-                    
-                    <div class="course-card">
-                        <a href="isi-course.html?course=tahsin-al-quran">
-                        <img src="https://i.pinimg.com/736x/76/94/71/76947128a9a73f4c5179595f419d5805.jpg" alt="Tahsin Al-Quran" class="course-image">
-                        <div class="course-content">
-                            <h3 class="course-title">Tahsin Al-Quran</h3>
-                            <div class="course-code">TSN101</div>
-                            <div class="course-price">Rp 180.000/bulan</div>
-                            <div class="instructor-info">
-                                <img src="https://via.placeholder.com/40x40" alt="Instructor" class="instructor-avatar">
-                                <div class="instructor-name">Ustadz Ahmad</div>
+                <div id="courseCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="course-card">
+                                        <a href="isi-course.html?course=tahsin-al-quran">
+                                            <img src="https://i.pinimg.com/736x/76/94/71/76947128a9a73f4c5179595f419d5805.jpg" alt="Tahsin Al-Quran" class="course-image">
+                                            <div class="course-content">
+                                                <h3 class="course-title">Tahsin Al-Quran</h3>
+                                                <div class="course-code">TSN101</div>
+                                                <div class="course-price">Rp 180.000/bulan</div>
+                                                <div class="instructor-info">
+                                                    <img src="https://via.placeholder.com/40x40" alt="Instructor" class="instructor-avatar">
+                                                    <div class="instructor-name">Ustadz Ahmad</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="course-card">
+                                        <a href="isi-course.html?course=program-tahfidz">
+                                            <img src="https://i.pinimg.com/474x/bd/21/3d/bd213dc6e61108d02c8b2d3577c7dc56.jpg" alt="Program Tahfidz" class="course-image">
+                                            <div class="course-content">
+                                                <h3 class="course-title">Program Tahfidz</h3>
+                                                <div class="course-code">THF102</div>
+                                                <div class="course-price">Rp 250.000/bulan</div>
+                                                <div class="instructor-info">
+                                                    <img src="https://via.placeholder.com/40x40" alt="Instructor" class="instructor-avatar">
+                                                    <div class="instructor-name">Ustadzah Fatima</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="course-card">
+                                        <a href="isi-course.html?course=Dasar-alquran">
+                                            <img src="https://i.pinimg.com/474x/47/59/77/4759770a56716871396e6d658b29c3d4.jpg" alt="Dasar Al-Quran" class="course-image">
+                                            <div class="course-content">
+                                                <h3 class="course-title">Dasar Al-Quran</h3>
+                                                <div class="course-code">DAQ103</div>
+                                                <div class="course-price">Rp 150.000/bulan</div>
+                                                <div class="instructor-info">
+                                                    <img src="https://via.placeholder.com/40x40" alt="Instructor" class="instructor-avatar">
+                                                    <div class="instructor-name">Ustadz Yusuf</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        </a>
                     </div>
-
-                    <!-- Course Card 2 -->
-                <div class="course-card">
-                    <a href="isi-course.html?course=program-tahfidz">
-                    <img src="https://i.pinimg.com/474x/bd/21/3d/bd213dc6e61108d02c8b2d3577c7dc56.jpg" alt="Program Tahfidz" class="course-image">
-                    <div class="course-content">
-                        <h3 class="course-title">Program Tahfidz</h3>
-                        <div class="course-code">THF102</div>
-                        <div class="course-price">Rp 250.000/bulan</div>
-                        <div class="instructor-info">
-                            <img src="https://via.placeholder.com/40x40" alt="Instructor" class="instructor-avatar">
-                            <div class="instructor-name">Ustadzah Fatima</div>
-                        </div>
-                    </div>
-                    </a>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#courseCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#courseCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <!-- Course Card 3 -->
-                <div class="course-card">
-                    <a href="isi-course.html?course=Dasar-alquran">
-                    <img src="https://i.pinimg.com/474x/47/59/77/4759770a56716871396e6d658b29c3d4.jpg" alt="Dasar Al-Quran" class="course-image">
-                    <div class="course-content">
-                        <h3 class="course-title">Dasar Al-Quran</h3>
-                        <div class="course-code">DAQ103</div>
-                        <div class="course-price">Rp 150.000/bulan</div>
-                        <div class="instructor-info">
-                            <img src="https://via.placeholder.com/40x40" alt="Instructor" class="instructor-avatar">
-                            <div class="instructor-name">Ustadz Yusuf</div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                </div>
-
-                
                 <div class="text-center mt-5">
                     <a href="courses.html" class="btn btn-primary btn-lg">Lihat Semua Kelas</a>
                 </div>
             </div>
         </section>
 
-
         <section class="cta-section">
             <div class="container text-center">
-                <h2 class="display-4 mb-4">Siap Memulai Perjalanan Al-Qur'an Anda?</h2>
+                <h2 class="display-4 mb-4">Lanjutkan Perjalanan Al-Qur'an Anda</h2>
                 <p class="lead mb-4">
-                    Bergabunglah dengan ribuan siswa di seluruh dunia dan mulailah
-                    pengalaman belajar Al-Qur'an yang transformatif.
+                    Tingkatkan pemahaman dan bacaan Al-Qur'an Anda dengan kelas-kelas interaktif dan
+                    bimbingan dari para ahli.
                 </p>
-                <a href="#" class="btn btn-light btn-lg">Mulai Sekarang</a>
+                <a href="belajar_online.html" class="btn btn-light btn-lg">Mulai Belajar</a>
             </div>
         </section>
     </main>
@@ -311,6 +268,7 @@
                         <li><a href="community.html">Komunitas</a></li>
                         <li><a href="about.html">Tentang Kami</a></li>
                         <li><a href="#contact">Kontak</a></li>
+                        <li><a href="user-dashboard.html">Dashboard Pengguna</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">

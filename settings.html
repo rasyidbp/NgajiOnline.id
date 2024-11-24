@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengaturan Akun - NgajiOnline.id</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index-styles.css">
+    <link rel="stylesheet" href="css/settings-styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index-home.html"><i class="fas fa-book-quran me-2"></i>NgajiOnline.id</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="user-dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#my-courses">Kelas Saya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#progress">Progres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#community">Komunitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html?from=dashboard">Profil</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link active" href="settings.html">Pengaturan</a>
+                    </li>
+                </ul>
+                <a href="#" id="logout-btn" class="btn btn-outline-primary ms-lg-3">Keluar</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="settings-main">
+        <div class="container mt-5 pt-5">
+            <h1 class="mb-4">Pengaturan Akun</h1>
+            
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active" id="v-pills-general-tab" data-bs-toggle="pill" data-bs-target="#v-pills-general" type="button" role="tab" aria-controls="v-pills-general" aria-selected="true">Umum</button>
+                        <button class="nav-link" id="v-pills-security-tab" data-bs-toggle="pill" data-bs-target="#v-pills-security" type="button" role="tab" aria-controls="v-pills-security" aria-selected="false">Keamanan</button>
+                        <button class="nav-link" id="v-pills-notifications-tab" data-bs-toggle="pill" data-bs-target="#v-pills-notifications" type="button" role="tab" aria-controls="v-pills-notifications" aria-selected="false">Notifikasi</button>
+                        <button class="nav-link" id="v-pills-privacy-tab" data-bs-toggle="pill" data-bs-target="#v-pills-privacy" type="button" role="tab" aria-controls="v-pills-privacy" aria-selected="false">Privasi</button>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-general" role="tabpanel" aria-labelledby="v-pills-general-tab">
+                            <h2 class="mb-4">Pengaturan Umum</h2>
+                            <form id="general-settings-form">
+                                <div class="mb-3">
+                                    <label for="language" class="form-label">Bahasa</label>
+                                    <select class="form-select" id="language" name="language">
+                                        <option value="id">Bahasa Indonesia</option>
+                                        <option value="en">English</option>
+                                        <option value="ar">العربية</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="timezone" class="form-label">Zona Waktu</label>
+                                    <select class="form-select" id="timezone" name="timezone">
+                                        <option value="Asia/Jakarta">Asia/Jakarta</option>
+                                        <option value="Asia/Makassar">Asia/Makassar</option>
+                                        <option value="Asia/Jayapura">Asia/Jayapura</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-security" role="tabpanel" aria-labelledby="v-pills-security-tab">
+                            <h2 class="mb-4">Keamanan</h2>
+                            <form id="security-settings-form">
+                                <div class="mb-3">
+                                    <label for="current-password" class="form-label">Password Saat Ini</label>
+                                    <input type="password" class="form-control" id="current-password" name="current-password" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="new-password" class="form-label">Password Baru</label>
+                                    <input type="password" class="form-control" id="new-password" name="new-password" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirm-password" class="form-label">Konfirmasi Password Baru</label>
+                                    <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Ubah Password</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-notifications" role="tabpanel" aria-labelledby="v-pills-notifications-tab">
+                            <h2 class="mb-4">Pengaturan Notifikasi</h2>
+                            <form id="notification-settings-form">
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="email-notifications" name="email-notifications">
+                                    <label class="form-check-label" for="email-notifications">Terima notifikasi melalui email</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="push-notifications" name="push-notifications">
+                                    <label class="form-check-label" for="push-notifications">Terima notifikasi push</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="sms-notifications" name="sms-notifications">
+                                    <label class="form-check-label" for="sms-notifications">Terima notifikasi melalui SMS</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Simpan Preferensi</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-privacy" role="tabpanel" aria-labelledby="v-pills-privacy-tab">
+                            <h2 class="mb-4">Pengaturan Privasi</h2>
+                            <form id="privacy-settings-form">
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="profile-visibility" name="profile-visibility">
+                                    <label class="form-check-label" for="profile-visibility">Profil dapat dilihat oleh publik</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="show-progress" name="show-progress">
+                                    <label class="form-check-label" for="show-progress">Tampilkan progres belajar di profil</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="allow-messages" name="allow-messages">
+                                    <label class="form-check-label" for="allow-messages">Izinkan pesan dari pengguna lain</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Simpan Pengaturan</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="h5 mb-3">Tentang NgajiOnline.id</h3>
+                    <p>
+                        Memberdayakan umat Islam untuk menyempurnakan
+                        bacaan Al-Qur'an mereka melalui teknologi inovatif dan bimbingan
+                        ahli.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h5 mb-3">Tautan Cepat</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#">Kelas</a></li>
+                        <li><a href="#">Komunitas</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h5 mb-3">Hubungi Kami</h3>
+                    <div class="social-icons mb-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <p>Berlangganan newsletter kami:</p>
+                    <form class="row g-2">
+                        <div class="col-auto">
+                            <input type="email" class="form-control" placeholder="Email Anda" />
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Berlangganan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4" />
+            <p class="text-center mb-0">
+                &copy; 2024 NgajiOnline.id. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/settings-script.js"></script>
+</body>
+</html>

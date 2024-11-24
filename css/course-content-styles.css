@@ -1,0 +1,47 @@
+.course-content-main {
+    padding-top: 60px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.list-group-item.active {
+    background-color: var(--green-600);
+    border-color: var(--green-600);
+}
+
+.progress-bar {
+    background-color: var(--green-600);
+}
+
+.btn-primary {
+    background-color: var(--green-600);
+    border-color: var(--green-600);
+}
+
+.btn-primary:hover {
+    background-color: var(--green-700);
+    border-color: var(--green-700);
+}
+
+.form-check-input:checked {
+    background-color: var(--green-600);
+    border-color: var(--green-600);
+}
+
+#logout-btn {
+    transition: all 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: var(--green-600);
+    color: white;
+}

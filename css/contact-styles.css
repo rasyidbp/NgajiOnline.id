@@ -185,3 +185,18 @@ footer a:hover {
         padding: 80px 0 100px;
     }
 }
+
+/* Custom styles for the toggle buttons */
+.nav-pills .nav-link {
+    color: var(--green-700);
+    background-color: transparent;
+    border: 1px solid var(--green-600);
+    margin: 0 5px;
+}
+.nav-pills .nav-link.active {
+    color: white;
+    background-color: var(--green-600);
+}
+.nav-pills .nav-link:hover {
+    background-color: var(--green-100);
+}
