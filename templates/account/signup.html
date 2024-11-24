@@ -1,0 +1,57 @@
+{% extends "account/base_entrance.html" %}
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign Up" %}{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h1 class="h3">{% trans "Create Account" %}</h1>
+    <p class="text-muted">{% trans "Join NgajiOnline.id today" %}</p>
+</div>
+
+{% get_providers as socialaccount_providers %}
+
+{% if socialaccount_providers %}
+<div class="social-login">
+    <a href="{% provider_login_url 'google' %}" class="btn btn-outline-dark w-100">
+        <i class="fab fa-google me-2"></i>{% trans "Continue with Google" %}
+    </a>
+</div>
+
+<div class="divider my-4">
+    <span class="px-2 bg-white text-muted">{% trans "or" %}</span>
+</div>
+{% endif %}
+
+<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="mb-3">
+        {{ field.label_tag }}
+        {{ field }}
+        {% if field.errors %}
+        <div class="invalid-feedback d-block">
+            {{ field.errors|join:", " }}
+        </div>
+        {% endif %}
+        {% if field.help_text %}
+        <small class="form-text text-muted">{{ field.help_text }}</small>
+        {% endif %}
+    </div>
+    {% endfor %}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="submit">{% trans "Sign Up" %}</button>
+    </div>
+</form>
+
+<div class="text-center mt-4">
+    <p class="mb-0">{% trans "Already have an account?" %}
+        <a href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+    </p>
+</div>
+{% endblock %}
