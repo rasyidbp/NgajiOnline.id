@@ -1,0 +1,146 @@
+{% load static %}
+
+{% block static %}
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+{% endblock static %}
+    
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock title %}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    {% block style %} {% endblock style %}
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}"
+          ><i class="fas fa-book-quran me-2"></i>NgajiOnline.id</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'features' %}#features">Fitur</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'courses' %}">Kelas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'community' %}">Komunitas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Kontak</a>
+            </li>
+          </ul>
+          {% if user.is_authenticated %}
+            <div class="dropdown ms-lg-3">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user me-2"></i>{{ user.email|truncatechars:20 }}
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="{% url 'account_email' %}"><i class="fas fa-envelope me-2"></i>Email Settings</a></li>
+                    <li><a class="dropdown-item" href="{% url 'account_change_password' %}"><i class="fas fa-key me-2"></i>Change Password</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="{% url 'account_logout' %}"><i class="fas fa-sign-out-alt me-2"></i>Keluar</a></li>
+                </ul>
+            </div>
+          {% else %}
+            <a href="{% url 'account_login' %}" class="btn btn-primary ms-lg-3">Masuk</a>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+
+    {% block main %}
+
+    <!-- Content -->
+
+    {% endblock main %}
+
+    <footer class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <h3 class="h5 mb-3">About NgajiOnline.id</h3>
+            <p>
+              Memberdayakan umat Islam untuk menyempurnakan bacaan Al-Qur'an
+              mereka melalui teknologi inovatif dan bimbingan ahli.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <h3 class="h5 mb-3">Quick Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="{% url 'index' %}">Beranda</a></li>
+              <li><a href="#features">Fitur</a></li>
+              <li><a href="#testimonials">Testimoni</a></li>
+              <li><a href="{% url 'courses' %}">Harga</a></li>
+              <li><a href="{% url 'community' %}">Komunitas</a></li>
+              <li><a href="{% url 'about' %}">Tentang Kami</a></li>
+              <li><a href="{% url 'contact' %}">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h3 class="h5 mb-3">Hubungi Kami</h3>
+            <div class="social-icons mb-3">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>Subscribe to our newsletter:</p>
+            <form class="row g-2">
+              <div class="col-auto">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <p class="text-center mb-0">
+          &copy; 2024 NgajiOnline.id. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    {% block js %} {% endblock js %}
+  </body>
+</html>
